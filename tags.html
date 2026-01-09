@@ -4,37 +4,39 @@ title: Tags
 permalink: /tags/
 ---
 
-<h1 class="text-3xl font-bold text-white mb-8">Tags</h1>
+<div class="max-w-xl mx-auto">
+  <header class="mb-12">
+    <h1 class="text-2xl font-semibold text-ink">Tags</h1>
+  </header>
 
-{% if site.tags.size > 0 %}
-  <div class="space-y-12">
-    {% assign sorted_tags = site.tags | sort %}
-    {% for tag in sorted_tags %}
-      <section id="tag-{{ tag[0] }}">
-        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
-          <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+  {% if site.tags.size > 0 %}
+    <div class="space-y-12">
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        <section id="tag-{{ tag[0] }}">
+          <h2 class="text-base font-medium text-ink mb-4 pb-2 border-b border-stone">
             {{ tag[0] }}
-          </span>
-          <span class="text-gray-500 text-sm font-normal">
-            {{ tag[1].size }} post{% if tag[1].size != 1 %}s{% endif %}
-          </span>
-        </h2>
-        <ul class="space-y-3 ml-4">
-          {% for post in tag[1] %}
-            <li class="border-l-2 border-gray-800 pl-4 hover:border-gray-600 transition-colors">
-              <a href="{{ post.url | relative_url }}" class="text-white hover:text-blue-400 transition-colors">
-                {{ post.title }}
-              </a>
-              <span class="text-gray-500 text-sm ml-2">{{ post.date | date: "%B %d, %Y" }}</span>
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endfor %}
-  </div>
-{% else %}
-  <div class="text-center py-16 border border-gray-800 rounded-lg">
-    <p class="text-gray-400 text-lg">No tags yet.</p>
-    <p class="text-gray-500 mt-2">Tags will appear here once posts are published.</p>
-  </div>
-{% endif %}
+            <span class="text-subtle font-normal ml-2 text-sm">
+              {{ tag[1].size }} post{% if tag[1].size != 1 %}s{% endif %}
+            </span>
+          </h2>
+          <ul class="space-y-3">
+            {% for post in tag[1] %}
+              <li>
+                <a href="{{ post.url | relative_url }}" class="text-ink hover:text-sea-600 transition-colors">
+                  {{ post.title }}
+                </a>
+                <span class="text-subtle text-sm ml-2">{{ post.date | date: "%B %Y" }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="text-center py-16">
+      <p class="text-muted">No tags yet.</p>
+      <p class="text-subtle text-sm mt-2">Tags will appear here once posts are published.</p>
+    </div>
+  {% endif %}
+</div>

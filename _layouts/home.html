@@ -4,64 +4,39 @@ layout: default
 
 <!-- Hero Section -->
 <section class="text-center mb-16">
-  <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{{ site.title }}</h1>
-  <p class="text-xl text-gray-400">Exploring ideas at the intersection of technology, finance, and the future.</p>
+  <h1 class="text-3xl md:text-4xl font-semibold text-ink mb-4">{{ site.title }}</h1>
+  <p class="text-lg text-muted">Thinking in public about investing, crypto, and the future</p>
 </section>
 
-<!-- About Section -->
-<section class="mb-12">
-  <h2 class="text-2xl font-bold text-white mb-6 pb-2 border-b border-gray-700">About Me</h2>
-  <div class="prose-custom text-gray-300">
+<!-- Brief Intro -->
+<section class="mb-16 max-w-xl mx-auto text-center">
+  <p class="text-ink leading-relaxed">
     {{ content }}
-  </div>
-</section>
-
-<!-- Interests Section -->
-<section class="mb-12">
-  <h2 class="text-2xl font-bold text-white mb-6 pb-2 border-b border-gray-700">What I'm Interested In</h2>
-  <ul class="space-y-3">
-    <li class="flex items-start gap-3">
-      <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
-      <span class="text-gray-300"><strong class="text-white">Crypto</strong> – Blockchain technology, decentralized systems, and the future of money.</span>
-    </li>
-    <li class="flex items-start gap-3">
-      <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2"></span>
-      <span class="text-gray-300"><strong class="text-white">Investing</strong> – Markets, value creation, and long-term thinking.</span>
-    </li>
-    <li class="flex items-start gap-3">
-      <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mt-2"></span>
-      <span class="text-gray-300"><strong class="text-white">AI</strong> – Artificial intelligence, machine learning, and their impact on society.</span>
-    </li>
-    <li class="flex items-start gap-3">
-      <span class="inline-block w-2 h-2 bg-emerald-500 rounded-full mt-2"></span>
-      <span class="text-gray-300"><strong class="text-white">Environment</strong> – Sustainability, climate, and our relationship with the planet.</span>
-    </li>
-    <li class="flex items-start gap-3">
-      <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mt-2"></span>
-      <span class="text-gray-300"><strong class="text-white">General Thoughts</strong> – Ideas, observations, and everything else.</span>
-    </li>
-  </ul>
+  </p>
+  <a href="{{ '/about/' | relative_url }}" class="inline-block mt-6 text-sea-600 hover:text-sea-700 text-sm underline underline-offset-2">
+    Read more about me
+  </a>
 </section>
 
 <!-- Latest Posts Section -->
-<section>
-  <h2 class="text-2xl font-bold text-white mb-6 pb-2 border-b border-gray-700">Latest Posts</h2>
-  {% assign recent_posts = site.posts | slice: 0, 3 %}
+<section class="max-w-xl mx-auto">
+  <h2 class="text-lg font-semibold text-ink mb-8 pb-3 border-b border-stone">Latest Posts</h2>
+  {% assign recent_posts = site.posts | slice: 0, 5 %}
   {% if recent_posts.size > 0 %}
-    <div class="space-y-6">
+    <div class="space-y-8">
       {% for post in recent_posts %}
-        <article class="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2">
-            <a href="{{ post.url | relative_url }}" class="text-white hover:text-blue-400 transition-colors">
+        <article>
+          <h3 class="text-base font-medium mb-1">
+            <a href="{{ post.url | relative_url }}" class="text-ink hover:text-sea-600 transition-colors">
               {{ post.title }}
             </a>
           </h3>
-          <p class="text-sm text-gray-500 mb-3">{{ post.date | date: "%B %d, %Y" }}</p>
-          <p class="text-gray-400">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <p class="text-sm text-subtle mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p class="text-muted text-sm leading-relaxed">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
           {% if post.tags.size > 0 %}
-            <div class="flex flex-wrap gap-2 mt-4">
+            <div class="flex flex-wrap gap-2 mt-3">
               {% for tag in post.tags %}
-                <a href="{{ '/tags/' | relative_url }}#tag-{{ tag }}" class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded hover:bg-gray-700 transition-colors">
+                <a href="{{ '/tags/' | relative_url }}#tag-{{ tag }}" class="text-xs text-subtle hover:text-muted transition-colors">
                   {{ tag }}
                 </a>
               {% endfor %}
@@ -71,8 +46,8 @@ layout: default
       {% endfor %}
     </div>
   {% else %}
-    <p class="text-gray-400 text-center py-8 border border-gray-800 rounded-lg">
-      No posts yet – stay tuned!
+    <p class="text-muted text-center py-12">
+      No posts yet. Check back soon.
     </p>
   {% endif %}
 </section>

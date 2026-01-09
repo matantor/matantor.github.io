@@ -11,58 +11,80 @@
       theme: {
         extend: {
           colors: {
-            dark: '#0f172a',
-            darker: '#020617',
-          }
+            sand: '#faf9f7',
+            stone: '#f5f4f1',
+            sea: {
+              50: '#f0f7fa',
+              100: '#dceef4',
+              200: '#b8dce9',
+              400: '#6ab0c7',
+              600: '#3d8ba6',
+              700: '#2d6b82',
+            },
+            ink: '#1a1a1a',
+            muted: '#5c5c5c',
+            subtle: '#8a8a8a',
+          },
+          fontFamily: {
+            sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
         }
       }
     }
   </script>
   <style type="text/tailwindcss">
+    @layer base {
+      html {
+        @apply antialiased;
+      }
+      body {
+        @apply text-ink leading-relaxed;
+      }
+    }
     @layer utilities {
       .prose-custom h1, .prose-custom h2, .prose-custom h3 {
-        @apply text-white font-bold mt-8 mb-4;
+        @apply text-ink font-semibold mt-8 mb-4;
       }
-      .prose-custom h1 { @apply text-3xl; }
-      .prose-custom h2 { @apply text-2xl; }
-      .prose-custom h3 { @apply text-xl; }
-      .prose-custom p { @apply mb-4 leading-relaxed; }
+      .prose-custom h1 { @apply text-2xl; }
+      .prose-custom h2 { @apply text-xl; }
+      .prose-custom h3 { @apply text-lg; }
+      .prose-custom p { @apply mb-6 leading-[1.75] text-ink; }
       .prose-custom ul, .prose-custom ol { @apply mb-4 pl-6; }
       .prose-custom li { @apply mb-2; }
-      .prose-custom a { @apply text-blue-400 hover:text-blue-300 underline; }
-      .prose-custom blockquote { @apply border-l-4 border-gray-600 pl-4 italic text-gray-400 my-4; }
-      .prose-custom code { @apply bg-gray-800 px-1.5 py-0.5 rounded text-sm; }
-      .prose-custom pre { @apply bg-gray-800 p-4 rounded-lg overflow-x-auto my-4; }
+      .prose-custom a { @apply text-sea-600 hover:text-sea-700 underline underline-offset-2; }
+      .prose-custom blockquote { @apply border-l-2 border-sea-200 pl-4 italic text-muted my-6; }
+      .prose-custom code { @apply bg-stone px-1.5 py-0.5 rounded text-sm; }
+      .prose-custom pre { @apply bg-stone p-4 rounded-lg overflow-x-auto my-4; }
       .prose-custom pre code { @apply bg-transparent p-0; }
     }
   </style>
 </head>
-<body class="bg-dark text-gray-200 min-h-screen">
+<body class="bg-sand min-h-screen">
   <!-- Navigation -->
-  <nav class="bg-darker border-b border-gray-800">
-    <div class="max-w-3xl mx-auto px-4 py-4">
+  <nav class="border-b border-stone">
+    <div class="max-w-2xl mx-auto px-6 py-5">
       <div class="flex items-center justify-between">
-        <a href="{{ '/' | relative_url }}" class="text-xl font-bold text-white hover:text-gray-300">
+        <a href="{{ '/' | relative_url }}" class="text-lg font-medium text-ink hover:text-muted transition-colors">
           {{ site.title }}
         </a>
-        <div class="flex gap-6">
-          <a href="{{ '/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors">Home</a>
-          <a href="{{ '/blog/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors">Blog</a>
-          <a href="{{ '/tags/' | relative_url }}" class="text-gray-300 hover:text-white transition-colors">Tags</a>
+        <div class="flex gap-8">
+          <a href="{{ '/' | relative_url }}" class="text-muted hover:text-ink transition-colors text-sm">Home</a>
+          <a href="{{ '/about/' | relative_url }}" class="text-muted hover:text-ink transition-colors text-sm">About</a>
+          <a href="{{ '/blog/' | relative_url }}" class="text-muted hover:text-ink transition-colors text-sm">Blog</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Main Content -->
-  <main class="max-w-3xl mx-auto px-4 py-12">
+  <main class="max-w-2xl mx-auto px-6 py-16">
     {{ content }}
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-800 mt-16">
-    <div class="max-w-3xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
-      &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.
+  <footer class="border-t border-stone mt-24">
+    <div class="max-w-2xl mx-auto px-6 py-8 text-center text-subtle text-sm">
+      &copy; {{ 'now' | date: '%Y' }} {{ site.title }}
     </div>
   </footer>
 </body>

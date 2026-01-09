@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="max-w-[38rem] mx-auto">
+<article class="max-w-[38rem] mx-auto" dir="{{ page.direction | default: 'ltr' }}">
   <!-- Post Header -->
   <header class="mb-12">
     <h1 class="text-[1.75rem] leading-tight font-semibold text-ink mb-4">{{ page.title }}</h1>

@@ -7,8 +7,6 @@ permalink: /essays/who-produces-the-best-dollar.he/
 translation: /essays/who-produces-the-best-dollar/
 date: 2026-01-01
 ---
-<div dir="rtl">
-<a href="/essays/who-produces-the-best-dollar/">Read in English</a>
 
 # מי מייצר את הדולר הטוב ביותר? מנוע המגזר הפרטי מעצב מחדש את אסטרטגיית החוב של ארה"ב
 
@@ -106,5 +104,3 @@ date: 2026-01-01
 
 *קישור לסרטון אנטון קוביאקוב:
 [https://x.com/BitcoinNewsCom/status/1965002879175139504?s=20](https://x.com/BitcoinNewsCom/status/1965002879175139504?s=20)
-
-</div>

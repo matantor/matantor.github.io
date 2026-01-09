@@ -1,0 +1,18 @@
+# Site settings
+title: "Matan Spector"
+description: "Personal blog and thoughts on crypto, investing, AI, environment, and more."
+baseurl: ""
+url: "https://matanspector.com"
+timezone: "Asia/Jerusalem"
+
+# Build settings
+markdown: kramdown
+
+# Permalink format for posts
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

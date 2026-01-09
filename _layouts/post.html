@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="max-w-[38rem] mx-auto" dir="{{ page.direction | default: 'ltr' }}">
+<article class="max-w-[38rem] mx-auto" {% if page.lang == 'he' or page.direction == 'rtl' %}dir="rtl"{% else %}dir="ltr"{% endif %}>
   <!-- Translation Link -->
   {% if page.translation %}
     <div class="mb-8 text-sm">
@@ -25,7 +25,7 @@ layout: default
   </header>
 
   <!-- Post Content -->
-  <div class="prose-custom text-ink text-[1.0625rem] {% if page.direction == 'rtl' %}prose-rtl{% endif %}">
+  <div class="prose-custom text-ink text-[1.0625rem] {% if page.lang == 'he' or page.direction == 'rtl' %}prose-rtl{% endif %}">
     {{ content }}
   </div>
 

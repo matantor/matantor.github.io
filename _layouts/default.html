@@ -67,13 +67,22 @@
 
       /* RTL support for Hebrew posts */
       .prose-rtl {
+        direction: rtl;
         text-align: right;
       }
-      .prose-rtl h1, .prose-rtl h2, .prose-rtl h3 {
+      .prose-rtl h1,
+      .prose-rtl h2,
+      .prose-rtl h3,
+      .prose-rtl h4,
+      .prose-rtl p {
         text-align: right;
       }
-      .prose-rtl ul, .prose-rtl ol {
+      .prose-rtl ul,
+      .prose-rtl ol {
         @apply pr-6 pl-0;
+      }
+      .prose-rtl li {
+        text-align: right;
       }
       .prose-rtl blockquote {
         @apply border-l-0 border-r-2 pr-5 pl-0;

@@ -94,8 +94,8 @@ The United States is not “reducing its debt in the crypto cloud” through cru
 This is at least the theory, or my understanding of it. I would be interested to know what you think.
 
 *Link to the Peter Thiel talk (short and recommended):
-https://www.youtube.com/watch?v=Osp_Ug_7r7Q
+[https://www.youtube.com/watch?v=Osp_Ug_7r7Q](https://www.youtube.com/watch?v=Osp_Ug_7r7Q)
 
 *Link to the Anton Kobyakov speech:
-https://x.com/BitcoinNewsCom/status/1965002879175139504?s=20
+[https://x.com/BitcoinNewsCom/status/1965002879175139504?s=20](https://x.com/BitcoinNewsCom/status/1965002879175139504?s=20)
 

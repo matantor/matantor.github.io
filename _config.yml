@@ -9,7 +9,7 @@ timezone: "Asia/Jerusalem"
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: false
+  hard_wrap: true
   auto_ids: true
   linkify: true
   syntax_highlighter: rouge

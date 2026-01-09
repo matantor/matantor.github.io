@@ -3,28 +3,29 @@ layout: default
 ---
 
 <article class="max-w-[38rem] mx-auto" dir="{{ page.direction | default: 'ltr' }}">
+  <!-- Translation Link -->
+  {% if page.translation %}
+    <div class="mb-8 text-sm">
+      {% if page.lang == "he" %}
+        <a href="{{ page.translation | relative_url }}" class="text-sea-600 hover:text-sea-700">Read in English</a>
+      {% else %}
+        <a href="{{ page.translation | relative_url }}" class="text-sea-600 hover:text-sea-700">Read in Hebrew (עברית)</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
   <!-- Post Header -->
   <header class="mb-12">
     <h1 class="text-[1.75rem] leading-tight font-semibold text-ink mb-4">{{ page.title }}</h1>
-    <div class="flex flex-wrap items-center gap-4 text-subtle text-sm">
+    <div class="text-subtle text-sm">
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%B %d, %Y" }}
       </time>
-      {% if page.tags.size > 0 %}
-        <span class="text-stone">|</span>
-        <div class="flex flex-wrap gap-2">
-          {% for tag in page.tags %}
-            <a href="{{ '/tags/' | relative_url }}#tag-{{ tag }}" class="text-subtle hover:text-muted transition-colors">
-              {{ tag }}
-            </a>
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
   </header>
 
   <!-- Post Content -->
-  <div class="prose-custom text-ink text-[1.0625rem]">
+  <div class="prose-custom text-ink text-[1.0625rem] {% if page.direction == 'rtl' %}prose-rtl{% endif %}">
     {{ content }}
   </div>
 

@@ -7,6 +7,12 @@ timezone: "Asia/Jerusalem"
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  linkify: true
+  syntax_highlighter: rouge
 
 # Permalink format for posts
 permalink: /blog/:year/:month/:day/:title/

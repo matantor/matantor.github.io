@@ -24,6 +24,10 @@ title: Blog
           </h2>
           <p class="text-sm text-subtle">
             {{ post.date | date: "%B %d, %Y" }}
+            {% if post.translation %}
+              <span class="mx-2">·</span>
+              <a href="{{ post.translation | relative_url }}" class="text-sea-600 hover:text-sea-700">Read in Hebrew (עברית)</a>
+            {% endif %}
           </p>
         </li>
       {% endfor %}

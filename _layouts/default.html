@@ -46,16 +46,16 @@
       .prose-custom h1, .prose-custom h2, .prose-custom h3 {
         @apply text-ink font-semibold;
       }
-      .prose-custom h1 { @apply text-2xl mt-12 mb-5; }
-      .prose-custom h2 { @apply text-[1.35rem] mt-12 mb-5; }
-      .prose-custom h3 { @apply text-lg mt-10 mb-4; }
+      .prose-custom h1 { @apply text-2xl mt-14 mb-6; }
+      .prose-custom h2 { @apply text-[1.35rem] mt-14 mb-6; }
+      .prose-custom h3 { @apply text-lg mt-12 mb-5; }
       .prose-custom > h1:first-child,
       .prose-custom > h2:first-child,
       .prose-custom > h3:first-child { @apply mt-0; }
-      .prose-custom p { @apply mb-6 leading-[1.7] text-ink; }
+      .prose-custom p { @apply mb-7 leading-[1.75] text-ink; }
       .prose-custom p + p { @apply mt-0; }
-      .prose-custom ul, .prose-custom ol { @apply mb-6 pl-6 leading-[1.7]; }
-      .prose-custom li { @apply mb-2; }
+      .prose-custom ul, .prose-custom ol { @apply mb-7 pl-6 leading-[1.75]; }
+      .prose-custom li { @apply mb-3; }
       .prose-custom li:last-child { @apply mb-0; }
       .prose-custom a { @apply text-sea-600 hover:text-sea-700 underline underline-offset-2; }
       .prose-custom blockquote { @apply border-l-2 border-sea-200 pl-5 italic text-muted my-8; }
@@ -63,7 +63,21 @@
       .prose-custom pre { @apply bg-stone p-4 rounded-lg overflow-x-auto my-6; }
       .prose-custom pre code { @apply bg-transparent p-0; }
       .prose-custom strong { @apply font-semibold text-ink; }
-      .prose-custom hr { @apply border-stone my-10; }
+      .prose-custom hr { @apply border-stone my-12; }
+
+      /* RTL support for Hebrew posts */
+      .prose-rtl {
+        text-align: right;
+      }
+      .prose-rtl h1, .prose-rtl h2, .prose-rtl h3 {
+        text-align: right;
+      }
+      .prose-rtl ul, .prose-rtl ol {
+        @apply pr-6 pl-0;
+      }
+      .prose-rtl blockquote {
+        @apply border-l-0 border-r-2 pr-5 pl-0;
+      }
     }
   </style>
 </head>

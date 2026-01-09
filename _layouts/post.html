@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<article class="max-w-xl mx-auto">
+<article class="max-w-[38rem] mx-auto">
   <!-- Post Header -->
-  <header class="mb-10">
-    <h1 class="text-2xl font-semibold text-ink mb-3">{{ page.title }}</h1>
+  <header class="mb-12">
+    <h1 class="text-[1.75rem] leading-tight font-semibold text-ink mb-4">{{ page.title }}</h1>
     <div class="flex flex-wrap items-center gap-4 text-subtle text-sm">
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%B %d, %Y" }}
@@ -24,7 +24,7 @@ layout: default
   </header>
 
   <!-- Post Content -->
-  <div class="prose-custom text-ink">
+  <div class="prose-custom text-ink text-[1.0625rem]">
     {{ content }}
   </div>
 

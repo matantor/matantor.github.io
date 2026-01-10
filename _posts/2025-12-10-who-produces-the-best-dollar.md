@@ -4,9 +4,8 @@ title: "Who Produces the Best Dollar"
 lang: en
 permalink: /essays/who-produces-the-best-dollar/
 translation: /essays/who-produces-the-best-dollar.he/
-date: 2026-01-01
+date: 2025-12-10
 ---
-[Read in Hebrew](/essays/who-produces-the-best-dollar.he/)
 
 # Who Makes the Best Dollar?
 # How the Private Sector Is Quietly Reshaping U.S. Debt Strategy

@@ -7,8 +7,7 @@ translation: /essays/who-produces-the-best-dollar.he/
 date: 2025-12-10
 ---
 
-# Who Makes the Best Dollar?
-# How the Private Sector Is Quietly Reshaping U.S. Debt Strategy
+## How the Private Sector Is Quietly Reshaping U.S. Debt Strategy
 Matan Spector, December 2025
 
 In September 2025, Anton Kobyakov, a senior advisor to President Putin, took the stage at the Eastern Economic Forum in Vladivostok and delivered a provocative allegation: the United States, he claimed, intends to use stablecoins and blockchain technology to “devalue” its public debt.
